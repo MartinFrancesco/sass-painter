@@ -1,9 +1,27 @@
-// VARIABLES
+/**************************************
+MAIN STYLESHEET
+**************************************/
+
+/***
+* GLOBAL SETTINGS
+***/
+// Vars
 @import'partials/vars';
-
-//COMMONS
+//Commons
 @import'partials/common';
-
-//UTILITIES
+//Utilities
 @import'partials/utilities';
 
+/***
+* BODY
+***/
+//NAVBAR
+@import'partials/navbar';
+//HERO SECTION
+@import 'partials/hero';
+//MENU
+@import 'partials/menu';
+//MAIN-CONTENT
+@import 'partials/main-content';
+// FOOTER
+@import 'partials/footer';

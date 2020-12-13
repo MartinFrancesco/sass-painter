@@ -1,0 +1,62 @@
+/*GENERAL UTILITIES*/
+/*Flex Typologies*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Classes*/
+.txt-uppercase {
+    text-transform: uppercase;
+}
+
+.text {
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    padding-top: 90px;
+}
+
+.arrow-sx, .arrow-dx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: $carousel-icons;
+    border-radius: 50%;
+    i {
+        font-size: 20px;
+        color: $color-text;
+    }
+}
+
+.photo {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    background: yellow;
+    & img {
+        margin: auto;
+        max-width: 100%;
+    }
+}

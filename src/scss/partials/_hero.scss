@@ -1,0 +1,86 @@
+/*HERO SECTION*/
+.hero {
+    height: 460px;
+    background-image: url('../../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position-x: 45%;
+    .container {
+        height: 100%;
+        @include flex-end;
+        overflow: hidden;
+        & .item-one {
+            height: 100%;
+            margin-top: 40px;
+            color: $color-text;
+            ul {
+                margin: 30  0 0 0px;
+                padding: 0;
+            }
+            ul li {
+                margin-bottom: 10px;
+            }
+            & span {
+                color: $color-text;
+            }
+            .button {
+                @include flex-center;
+                width: 250px;
+                margin-top: 30px;
+                padding: 10px;
+                color: $color-text;
+                background: $button-col;
+                & div:first-child {
+                    padding: 0 15px 0 0;
+                    border-right: 1px solid #fff;
+                } & h3 {
+                    margin: 0;
+                }
+                & div:last-child {
+                    @include flex-center;
+                } & i {
+                    font-size: 30px;
+                    margin-left: 15px;
+                }
+            }
+        }
+        & .item-two {
+            position: relative;
+            width: 390px;
+            height: 100%;
+            margin: 70px 0 0 40px;
+            padding-top: 30px;
+            background-color: $black;
+        } & .bottom {
+            padding: 10px;
+            background: $color-text;
+        } & .top, & .bottom {
+            display: block;
+            margin: 20px;
+            h2, h3, h4, p {
+                margin: 0 0 5px 0;
+            } h2 {
+                color: $color-text;
+            } h4 {
+                color: $link-col;
+            } a {
+                color: $important-col;
+            }
+        } & button {
+            font-size: 16px;
+            width: 150px;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border: none;
+            color: $color-text;
+            background: $button-btn;
+            &:hover {
+                background: $button-hover;
+                cursor: pointer;
+            }
+        } & img {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+        }      
+    }
+}

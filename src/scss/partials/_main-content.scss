@@ -1,0 +1,123 @@
+/*SECTION ONE*/
+.one {
+    height: 80vh;
+    text-align: center;
+    color: $color-text;
+    background-image: url('../../img/cover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*SECTION TWO*/
+.two {
+    & .carousel {
+        position: relative;
+        width: 800px;
+        margin: 50px auto;
+        & img {
+            max-width: 100%;
+        }
+    }
+    & .arrow-sx {
+        position: absolute;
+        top: 50%;
+        left: -50px;
+    }
+    & .arrow-dx {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+    }
+}
+
+/*PARALLAX*/
+.parallax {
+    height: 100vh;
+    background-image: url('../../img/parallax.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.parall {
+    background-image: url('../../img/parall-2.jpg'); 
+}
+
+/*SECTION TOOLS*/
+.tools {
+    height: 250vh;
+    color: $color-text;
+    background: $photo-section;
+    & .container:nth-child(n+2):nth-child(-n+3) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 180px;
+        & .text {
+            text-align: left;
+            width: 400px;
+        }
+    }
+    & .container:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+}
+
+/*SECTION INSPIRATIONS*/
+.inspirations {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    & .up {
+        text-align: center;
+        @include flex-center;
+        flex-direction: column;
+        margin: 50px 0;
+        & .squares {
+            display: flex;
+        }
+        & .square {
+            position: relative;
+            height: 240px;
+            width: 240px;
+            margin: 10px;
+            background: red;
+            overflow: hidden;
+            & img {
+                max-width: 100%;
+                transition: all 0.5s ease-in-out;
+            }
+            &:hover img {
+                transform: scale(1.2);;
+            }
+            & h4 {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $color-text;
+                z-index: 1;
+            }
+        } 
+    }
+    & .down {
+        @include flex-center;
+        flex-grow: 1;
+        background-image: url('../../img/footer.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        & div {
+            text-align: center;
+            height: 240px;
+            width: 350px;
+            margin: 10px;
+            padding: 50px 10px 10px 10px;
+            background: $color-text;
+            & span {
+                color: $important-col;
+            }
+        }
+    }
+}
